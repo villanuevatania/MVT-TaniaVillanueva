@@ -1,14 +1,13 @@
-from django.http import HttpRequest
+from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Familiar
 
 # Create your views here.
 def inicio (request):
-    return HttpResponse('<h1 style="color:Violet;">Pongo letra rosa porque me la banco</h1>')
+    return render(request,'index.html')
 
-def un_template (request):
+def un_template(request):
     
 #    template = loader.get_template('index.html')
     
@@ -23,4 +22,4 @@ def un_template (request):
 #    render = template.render({'lista_familiar': [familiar1, familiar2, familiar3]})
 #    return HttpResponse(render)
 
-    return render(request,'index.html', {'lista_familiar': [familiar1, familiar2, familiar3]})
+    return render(request,'mi_template.html', {'lista_familiar': [familiar1, familiar2, familiar3]})
