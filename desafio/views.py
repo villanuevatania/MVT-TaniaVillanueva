@@ -11,9 +11,9 @@ def un_template(request):
     
 #    template = loader.get_template('index.html')
     
-    familiar1 = Familiar(nombre='Juan',edad= 34,fecha_nacimiento= 1987/7/14)
-    familiar2 = Familiar(nombre='Horacio',edad= 2, fecha_nacimiento= 2000/2/20)
-    familiar3 = Familiar(nombre='Ricardo',edad= 31, fecha_nacimiento= 1991/5/19)
+    familiar1 = Familiar(nombre='Juan',edad= 34,fecha_nacimiento= '1987-7-14')
+    familiar2 = Familiar(nombre='Horacio',edad= 2, fecha_nacimiento= '2000-2-20')
+    familiar3 = Familiar(nombre='Ricardo',edad= 31, fecha_nacimiento= '1991-5-19')
     
     familiar1.save()
     familiar2.save()
